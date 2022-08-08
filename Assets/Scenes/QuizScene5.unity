@@ -670,13 +670,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f36718c30a374a3a9d08c5d4eff074f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionNumber: {fileID: 1749128595}
-  questionStatement: {fileID: 2056105246}
-  element1: {fileID: 256596228}
-  element2: {fileID: 1986621221}
-  element3: {fileID: 655848647}
-  correctAnswer: {fileID: 0}
-  answerStatement: {fileID: 0}
+  questionNumber: 5
+  textQuestionNumber: {fileID: 1749128595}
+  textQuestionStatement: {fileID: 2056105246}
+  buttonElement1: {fileID: 256596228}
+  buttonElement2: {fileID: 1986621221}
+  buttonElement3: {fileID: 655848647}
+  textCorrectAnswer: {fileID: 0}
+  textCommentStatement: {fileID: 0}
   score_object: {fileID: 1749128595}
 --- !u!1 &1520654346
 GameObject:
@@ -1128,7 +1129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639677140}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8645e33feec1f416190168422c8f942e, type: 3}
   m_Name: 
@@ -1141,7 +1142,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639677140}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fa6bcd9f398b4829a89419682ed729e, type: 3}
   m_Name: 
@@ -1601,7 +1602,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081625073}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8645e33feec1f416190168422c8f942e, type: 3}
   m_Name: 
@@ -1614,7 +1615,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081625073}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fa6bcd9f398b4829a89419682ed729e, type: 3}
   m_Name: 

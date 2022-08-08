@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class ResultManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void PushGoTitleButton()
     {
-        
+        Initiate.Fade("TitleScene", Color.black, 1.0f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PushTwiterButton()
     {
-        
+        // 得点を取得
+        naichilab.UnityRoomTweet.Tweet("YOUR-GAMEID", "ツイートサンプルです。", "#COVID19対策模試");
     }
 }

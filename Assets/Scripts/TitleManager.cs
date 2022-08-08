@@ -8,6 +8,5 @@ public class TitleManager : MonoBehaviour
     public void PushStartButtonToIntro1()
     {
         Initiate.Fade("IntroFirst", Color.black, 1.0f);
-        //SceneManager.LoadScene("IntroFirst");
     }
 }

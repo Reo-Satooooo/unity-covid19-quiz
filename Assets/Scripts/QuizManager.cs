@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class QuizManager : MonoBehaviour
 {
-    public GameObject questionNumber = null; // 問題番号
-    public GameObject questionStatement = null; // 問題文
-    public GameObject element1 = null; // 解答1
-    public GameObject element2 = null; // 解答2
-    public GameObject element3 = null; // 解答3
-    public GameObject correctAnswer = null; //正解
-    public GameObject answerStatement = null; //解説文
+    public int questionNumber;
+
+    public GameObject textQuestionNumber = null; // 問題番号
+    public GameObject textQuestionStatement = null; // 問題文
+    public GameObject buttonElement1 = null; // 解答1
+    public GameObject buttonElement2 = null; // 解答2
+    public GameObject buttonElement3 = null; // 解答3
+    public GameObject textCorrectAnswer = null; //正解
+    public GameObject textCommentStatement = null; //解説文
 
     public GameObject score_object = null; // Textオブジェクト
 
@@ -26,33 +28,43 @@ public class QuizManager : MonoBehaviour
         csvReader = GameObject.Find("CSVManager").GetComponent<CSVReader>();
         quizDatas = csvReader.ReadCSV();
 
-        Debug.Log(quizDatas[0][0]);
-        Debug.Log(quizDatas[0][1]);
-        Debug.Log(quizDatas[0][2]);
+        //クイズデータ
+        string questionStatement = quizDatas[questionNumber][0];
+        string questionElement1 = quizDatas[questionNumber][1];
+        string questionElement2 = quizDatas[questionNumber][2];
+        string questionElement3 = quizDatas[questionNumber][3];
+        string correctAnswer = quizDatas[questionNumber][4];
+        string commentStatement = quizDatas[questionNumber][5];
 
-        Text score_text = score_object.GetComponent<Text>();
-        // テキストの表示を入れ替える
-        score_text.text = "000000";
+        Text qNumber = textQuestionNumber.GetComponent<Text>();
+        qNumber.text = "問題 "+questionNumber;
 
-        //UnityEngine.Debug.Log(quizDatas[0][0]);
+        Text qStatement = textQuestionStatement.GetComponent<Text>();
+        qStatement.text = questionStatement;
+
+        Text qElement1 = buttonElement1.GetComponent<Text>();
+        qElement1.text = questionElement1;
+
+        Text qElement2 = buttonElement2.GetComponent<Text>();
+        qElement2.text = questionElement2;
+
+        Text qElement3 = buttonElement3.GetComponent<Text>();
+        qElement3.text = questionElement3;
     }
 
-    // Update is called once per frame
-    void Update()
+    public string[] GetCorrectAnswerData()
     {
-        
-    }
+        csvReader = GameObject.Find("CSVManager").GetComponent<CSVReader>();
+        quizDatas = csvReader.ReadCSV();
 
-    // 正解ボタンをタップ
-    public void PushElementButtonCorrect()
-    {
-        
-    }
+        string correctAnswer = quizDatas[questionNumber][4];
+        string commentStatement = quizDatas[questionNumber][5];
 
-    // 不正解ボタンをタップ
-    public void PushElementButtonUncorrect()
-    {
-        
-    }
+        string[] correctAnswerData = new string[] {correctAnswer, commentStatement};
 
+        //Debug.Log(correctAnswerData[0]);
+        //Debug.Log(correctAnswerData[1]);
+
+        return correctAnswerData;
+    }
 }

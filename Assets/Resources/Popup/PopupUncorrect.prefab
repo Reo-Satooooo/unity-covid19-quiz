@@ -72,7 +72,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -371,6 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e678f8a8d84c492295191f124239340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextQuestionNumber: 0
   buttonNQ: {fileID: 1891228864204992566}
   textUncorrectAnswer: {fileID: 1891228864451600456}
   textUncorrectAnswerStatement: {fileID: 1891228863790579726}
