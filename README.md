@@ -1,6 +1,6 @@
 # unity-covid19-quiz
 
-![スクリーンショット 2022-08-10 2 58 26](https://user-images.githubusercontent.com/69742127/183726269-2caaedce-c276-431c-825b-0e7f31fd54cb.png)
+|![スクリーンショット 2022-08-10 3 05 08](https://user-images.githubusercontent.com/69742127/183727850-e99b5920-7111-460e-87e2-a4082db31c73.png)|![スクリーンショット 2022-08-10 3 05 56](https://user-images.githubusercontent.com/69742127/183727862-07133e4b-1e68-4ead-a5af-410cecac1439.png)|
 
 若者による感染対策の広報ワークセッション（2022年8月：内閣官房 新型コロナウイルス等感染症対策推進室主催）Fグループ成果物
 
