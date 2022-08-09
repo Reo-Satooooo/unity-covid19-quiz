@@ -62,9 +62,19 @@ public class QuizManager : MonoBehaviour
 
         string[] correctAnswerData = new string[] {correctAnswer, commentStatement};
 
-        //Debug.Log(correctAnswerData[0]);
-        //Debug.Log(correctAnswerData[1]);
-
         return correctAnswerData;
+    }
+
+    // 問題番号を取得
+    public int GetQuestionNumber()
+    {
+        return questionNumber;
+    }
+
+    // 選択を保存
+    public void SaveAnswer(int questionNumber, int answerFlag)
+    {
+        string questionNumberText = questionNumber.ToString();
+        PlayerPrefs.SetInt(questionNumberText, answerFlag);
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UncorrectButtonManager : MonoBehaviour
 {
     public int nextQuestionNumber;
+    private int questionNumber;
     private QuizManager quizManager;
     private string[] correctAnswerData;
 
@@ -20,6 +21,9 @@ public class UncorrectButtonManager : MonoBehaviour
         Button button = GetComponent<Button>();
         button.onClick.AddListener(() =>
         {
+            questionNumber = quizManager.GetQuestionNumber();
+            quizManager.SaveAnswer(questionNumber, 0);
+
             //Popupを表示
             PopupUCManager popupUC = PopupController.Instance.CreatePopupUC();
             //Init(Transform canvas, string textCA, string textCAS)
