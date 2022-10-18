@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "COVID19\n\u5BFE\u7B56\u6A21\u8A66"
+  m_Text: "COVID19\n\u5BFE\u7B56\u30AF\u30A4\u30BA"
 --- !u!222 &305639710
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ver.2022_08
+  m_Text: Ver.2022_10
 --- !u!222 &852256961
 CanvasRenderer:
   m_ObjectHideFlags: 0
