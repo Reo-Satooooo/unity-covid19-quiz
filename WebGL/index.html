@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=607 height=1080></canvas>
+      <canvas id="unity-canvas" width=360 height=640></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -82,8 +82,8 @@
         config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        canvas.style.width = "607px";
-        canvas.style.height = "1080px";
+        canvas.style.width = "360px";
+        canvas.style.height = "640px";
       }
       loadingBar.style.display = "block";
 

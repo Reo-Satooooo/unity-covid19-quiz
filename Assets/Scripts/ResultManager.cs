@@ -61,6 +61,6 @@ public class ResultManager : MonoBehaviour
     {
         // 得点を取得
 
-        naichilab.UnityRoomTweet.Tweet("unity-covid19-quiz",textScore + " " + feedBackComment, "COVID19対策模試");
+        naichilab.UnityRoomTweet.Tweet("unity-covid19-quiz",textScore + " " + feedBackComment, "COVID19対策クイズ");
     }
 }

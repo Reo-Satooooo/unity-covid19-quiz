@@ -9,4 +9,8 @@ public class TitleManager : MonoBehaviour
     {
         Initiate.Fade("IntroFirst", Color.black, 1.0f);
     }
+    public void PushNextButtonToIntro2()
+    {
+        Initiate.Fade("IntroSecond", Color.black, 1.0f);
+    }
 }
