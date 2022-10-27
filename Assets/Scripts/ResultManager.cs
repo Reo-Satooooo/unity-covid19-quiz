@@ -35,11 +35,11 @@ public class ResultManager : MonoBehaviour
             feedBackComment = "よくできました！引き続き感染対策を心がけてください！";
         }
         else if(score >= qNumberMax * 0.6){
-            feedBackComment = "感染対策に見落としがあるかもしれません。正しい知識を学び、感染対策を心がけてください！";
+            feedBackComment = "惜しい！感染対策への理解に不十分なところがあるかもしれません。正しい知識を学んで、感染対策を心がけましょう！";
         }
         else
         {
-            feedBackComment = "感染対策ができていないかもしれません。正しい知識を学び、感染対策を心がけてください！";
+            feedBackComment = "感染対策への理解に不十分なところがあるかもしれません。正しい知識を学んで、感染対策を心がけましょう！";
         }
 
         textScore = "正解数 " + score + "/" + qNumberMax;
