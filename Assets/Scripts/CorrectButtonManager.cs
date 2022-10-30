@@ -24,9 +24,21 @@ public class CorrectButtonManager : MonoBehaviour
             questionNumber = quizManager.GetQuestionNumber();
             quizManager.SaveAnswer(questionNumber,1);
             //Popupを表示
-            PopupCManager popupC = PopupController.Instance.CreatePopupC();
-            //Init(Transform canvas, string textCA, string textCAS)
-            popupC.Init(PopupController.Instance.MainCanvas, correctAnswerData[0], "【解説】" + correctAnswerData[1], nextQuestionNumber);
+
+            // 最終問題の場合
+            if (nextQuestionNumber == 6)
+            {
+                PopupCManager popupLQC = PopupController.Instance.CreatePopupLQC();
+                //Init(Transform canvas, string textCA, string textCAS)
+                popupLQC.Init(PopupController.Instance.MainCanvas, correctAnswerData[0], "【解説】" + correctAnswerData[1], nextQuestionNumber);
+            }
+            // 最終問題以外の場合
+            else
+            {
+                PopupCManager popupC = PopupController.Instance.CreatePopupC();
+                //Init(Transform canvas, string textCA, string textCAS)
+                popupC.Init(PopupController.Instance.MainCanvas, correctAnswerData[0], "【解説】" + correctAnswerData[1], nextQuestionNumber);
+            }
         });
     }
 }

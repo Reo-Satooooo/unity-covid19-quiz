@@ -25,9 +25,21 @@ public class UncorrectButtonManager : MonoBehaviour
             quizManager.SaveAnswer(questionNumber, 0);
 
             //Popupを表示
-            PopupUCManager popupUC = PopupController.Instance.CreatePopupUC();
-            //Init(Transform canvas, string textCA, string textCAS)
-            popupUC.Init(PopupController.Instance.MainCanvas, correctAnswerData[0], "【解説】" + correctAnswerData[1], nextQuestionNumber);
+
+            // 最終問題の場合
+            if (nextQuestionNumber == 6)
+            {
+                PopupUCManager popupLQUC = PopupController.Instance.CreatePopupLQUC();
+                //Init(Transform canvas, string textCA, string textCAS)
+                popupLQUC.Init(PopupController.Instance.MainCanvas, correctAnswerData[0], "【解説】" + correctAnswerData[1], nextQuestionNumber);
+            }
+            // 最終問題以外の場合
+            else
+            {
+                PopupUCManager popupUC = PopupController.Instance.CreatePopupUC();
+                //Init(Transform canvas, string textCA, string textCAS)
+                popupUC.Init(PopupController.Instance.MainCanvas, correctAnswerData[0], "【解説】" + correctAnswerData[1], nextQuestionNumber);
+            }         
         });
     }
 }
